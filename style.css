@@ -1,0 +1,51 @@
+
+/*
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "https://www.cmsbetconstruct.com/casino/getGames?partner_id=1&lang=arm&country=AM&offset=0&limit=30", true);
+  xhttp.send();
+  console.log(xhttp);
+}*/
+/*
+function myFunction(xml) {
+  var i;
+  var xmlDoc = xml.responseXML;
+  var table="<tr><th>Artist</th><th>Title</th></tr>";
+  var x = xmlDoc.getElementsByClassName("all-games-container");
+  for (i = 0; i <x.length; i++) { 
+    table += "<tr><td>" +
+    x[i].getElementsByTagName("a")[0].childNodes[0].nodeValue  +
+    "</td></tr>";
+  }
+  document.getElementById("demo").innerHTML = table;
+}
+
+function newDoc() {
+  window.location.assign("https://www.cmsbetconstruct.com/casino/getGames?partner_id=1&lang=arm&country=AM&offset=0&limit=30")
+}
+ <div id="demo">
+        <h2>The XMLHttpRequest Object</h2>
+        <button type="button" onclick="loadDoc()">Change Content</button>
+    </div>
+    <input type="button" value="Load new document" onclick="newDoc()">
+    <div class="all-games" id="game"></div>
+*/
+#mainChessBoard{
+    width:480px;
+    height:480px;
+    border:1px solid black;
+}
+
+button{
+ width:60px;
+ height:60px;
+ border: 0;
+}
+
+ 

@@ -1,21 +1,24 @@
-
 function test() {
-  var dashboard = [];
-  var obj = {};
-  for (var i = 1; i <= 64; i++) {
-    dashboard.push(obj);
+  const chessBoard = document.createElement("div");
+  chessBoard.id = "mainChessBoard";
+  for (let i = 0; i < 64; i++) {
+    const button = document.createElement("button");
+    button.style.backgroundColor = (Math.floor(i / 8) + i) % 2 == 0 ? 'white' : 'black';
+    button.dataset.id = i + 1;
+    chessBoard.appendChild(button);
   }
-  for (j = 0; j < dashboard.length; j++) {
-    document.getElementById("mainChessBoard").appendChild(document.createElement("button")).style.backgroundColor = parseInt((j / 8) + j) % 2 == 0 ? 'white': '#ababab' ;
-    var btns = document.querySelectorAll('button');
-    btns[j].addEventListener('click', function () {
-      var x = Math.floor(Math.random() * 256);
-      var y = Math.floor(Math.random() * 256);
-      var z = Math.floor(Math.random() * 256);
-      var bgColor = "rgb(" + x + "," + y + "," + z + ")";
-      this.style.backgroundColor = bgColor;
-      console.log(bgColor);
-    });
-  }
-}
+  chessBoard.addEventListener('click', function (e) {
+    if (e.target.dataset.id) {
+      document.getElementById("demo").innerHTML = e.target.dataset.id;
+      const x = Math.random() * 256;
+      const y = Math.random() * 256;
+      const z = Math.random() * 256;
+      const bgColor = `rgb(${x} ${y} ${z})`
+      e.target.style.backgroundColor = bgColor;
+    }
+  });
+  document.body.appendChild(chessBoard);
+};
 test();
+
+
